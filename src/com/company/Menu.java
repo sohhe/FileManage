@@ -23,18 +23,22 @@ public class Menu {
 
             int result = sw.readInt();
 
-            for (int i = 0; i < 4 ; i++) {
+            for (int i = 0; i < 2 ; i++) {
 
                 if (result == 1) {
                     User user = new User();
                     System.out.println("Введите имя пользователя: ");
                     user.setName(sw.readLine());
+                    System.out.println("Введите id пользователя: ");
+                    user.setId(sw.readLong());
                     System.out.println("Введите login пользователя: ");
                     user.setLogin(sw.readLine());
+                    System.out.println("Введите password пользователя: ");
+                    user.setPassword(sw.readLine());
                     userContainer.add(user);
-                    userContainer.poluchenie();
-//                fileWorker.write("manage.txt",userContainer);
-//                fileWorker.read("manage.txt");
+//                    userContainer.poluchenie();
+                    fileWorker.write("manage.txt",userContainer);
+                    fileWorker.read("manage.txt");
 
                 } else if (result == 2) {
                     Photo photo = new Photo();

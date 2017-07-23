@@ -1,9 +1,9 @@
 package com.company;
 
 
+import java.io.Serializable;
 
-
-public class User {
+public class User implements Serializable{
 
     private String name;
     private long id;
@@ -54,13 +54,4 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }

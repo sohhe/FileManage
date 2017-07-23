@@ -10,7 +10,7 @@ public class FileWorker  {
     public void write(String filename,UserContainer userContainer){
         File file = new File(filename);
 
-        try {
+        try{
             FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 

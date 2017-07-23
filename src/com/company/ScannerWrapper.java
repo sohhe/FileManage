@@ -16,8 +16,8 @@ public class ScannerWrapper {
         return result;
     }
 
-    public double readDouble(){
-        double result = scanner.nextDouble();
+    public long readLong(){
+        long result = scanner.nextLong();
         scanner.nextLine();
         return result;
     }

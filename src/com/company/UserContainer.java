@@ -2,9 +2,11 @@ package com.company;
 
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 public class UserContainer implements Serializable {
-    public  static  int counter;
+
+    public int counter;
     private User[] users = new User[1];
 
 
@@ -14,7 +16,7 @@ public class UserContainer implements Serializable {
 
         if (users.length == counter){
             User[] users1 = new User[counter +5];
-            for (int i = 0; i < users1.length; i++ ) {
+            for (int i = 0; i < users.length; i++ ) {
                 users1[i] = users[i];
             }
             users = users1;
@@ -37,5 +39,10 @@ public class UserContainer implements Serializable {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "UserContainer{" +
+                "users=" + Arrays.toString(users) +
+                '}';
+    }
 }
