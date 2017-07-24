@@ -1,7 +1,9 @@
 package com.company;
 
 
-public class Photo {
+import java.io.Serializable;
+
+public class Photo implements Serializable{
 
     private long id;
     private int width;

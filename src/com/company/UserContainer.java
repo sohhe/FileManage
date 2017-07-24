@@ -21,22 +21,26 @@ public class UserContainer implements Serializable {
             }
             users = users1;
         }
-
-
-    }
-
-    public void poluchenie(){
-        for (int i = 0; i <  users.length; i++) {
-            System.out.println(users[i]);
-        }
     }
 
     public void delete(long id){
-
+        for (int i = 0; i < users.length; i++) {
+            if (id == i){
+                users[i] = null;
+            }else{
+                System.out.println("Пользователm с таким id не найден!");
+            }
+        }
     }
 
-    public void update(){
-
+    public void update(long id,User user){
+        for (int i = 0; i < users.length ; i++) {
+            if (id == i) {
+                users[i] = user;
+            }else{
+                System.out.println("Пользователm с таким id не найден!");
+            }
+        }
     }
 
     @Override

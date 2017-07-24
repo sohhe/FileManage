@@ -4,7 +4,7 @@ package com.company;
 import java.io.*;
 import java.io.IOException;
 
-public class FileWorker  {
+public class UserFileWorker {
 
 
     public void write(String filename,UserContainer userContainer){
