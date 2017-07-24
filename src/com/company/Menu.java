@@ -12,19 +12,20 @@ public class Menu {
         PhotoFileWorker photoFileWorker = new PhotoFileWorker();
         ScannerWrapper sw = new ScannerWrapper();
 
-        System.out.println("Здарвствуйте, введите " +
-                "\n1 - Добавить пользователя" +
-                "\n2 - Добавить фотографию" +
-                "\n3 - Удалить пользователя по id" +
-                "\n4 - Обновление данных пользователя по id" +
-                "\n5 - Сохранить(запись данных в файл)" +
-                "\n0 - Выйти");
 
         try {
 
-            int result = sw.readInt();
+            for (int i = 0; i < 100 ; i++) {
 
-            for (int i = 0; i < 2 ; i++) {
+                System.out.println("Здарвствуйте, введите " +
+                        "\n1 - Добавить пользователя" +
+                        "\n2 - Добавить фотографию" +
+                        "\n3 - Удалить пользователя по id" +
+                        "\n4 - Обновление данных пользователя по id" +
+                        "\n5 - Сохранить(запись данных в файл)" +
+                        "\n0 - Выйти");
+
+                int result = sw.readInt();
 
                 if (result == 1) {
                     User user = new User();
